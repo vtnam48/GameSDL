@@ -1,5 +1,6 @@
 //#include "Equation.h"
 
+
 //void Equation::randomEquation(){
 //    x = rand()%MAX_A;
 //    y = rand()%MAX_B;

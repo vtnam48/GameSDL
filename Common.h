@@ -11,6 +11,13 @@
 
 using namespace std;
 
+SDL_Window* window;
+SDL_Renderer* renderer;
+Mix_Chunk* chunk = nullptr;
+
+bool playAgain = true;
+
+
 const int SCREEN_WIDTH = 800;
 const int SCREEN_HEIGHT = 600;
 const string WINDOW_TITLE = "True Or False";

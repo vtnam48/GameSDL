@@ -1,7 +1,6 @@
 #include "SDL_utils.h"
-//#include "Common.h"
+#include <SDL_ttf.h>
 using namespace std;
-
 
 
 void quitSDL(SDL_Window* window, SDL_Renderer* renderer)
@@ -20,17 +19,3 @@ void waitUntilKeyPressed()
         SDL_Delay(10);
     }
 }
-//void getImage(string const path)
-//{
-//    SDL_Texture* newTexture = nullptr;
-//    SDL_Surface* loadedImgSurface = IMG_Load(path.c_str());
-//    if (loadedImgSurface == nullptr) cout << "Error loading Surface\n";
-//    else{
-//        newTexture = SDL_CreateTextureFromSurface(renderer, loadedImgSurface);
-//
-//        SDL_FreeSurface(loadedImgSurface);
-//        SDL_RenderClear(renderer);
-//        SDL_RenderCopy(renderer, newTexture, nullptr, nullptr);
-//        SDL_RenderPresent(renderer);
-//    }
-//}

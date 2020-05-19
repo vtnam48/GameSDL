@@ -1,15 +1,13 @@
 #ifndef EQUATION_H
 #define EQUATION_H
+
 #include "Common.h"
-#include "Equation.cpp"
 
 struct Equation{
-
-    int x, y, z;
+    int x = 0, y = 0, z = 0;
     typeEqua tp;
 
-    void randomEquation()
-    {
+    void randomEquation(){
         x = rand()%MAX_A;
         y = rand()%MAX_B;
 
@@ -19,9 +17,9 @@ struct Equation{
         if(n == 1) tp = tru;
         if(n == 2) tp = nhan;
 
-        if(tp == cong)z = (x+y) + rand()%flex;
-        if(tp == tru) z = (x-y) + rand()%flex;
-        if(tp == nhan) z = (x*y) + rand()%flex;
+        if(tp == cong)  z = (x+y) + rand()%flex;
+        if(tp == tru)   z = (x-y) + rand()%flex;
+        if(tp == nhan)  z = (x*y) + rand()%flex;
 
     }
 
@@ -34,7 +32,7 @@ struct Equation{
         stringstream s2;
         s2 << y;
         if(tp == cong) strReturn = strReturn + " + " + s2.str();
-        if(tp == tru) strReturn = strReturn + " - " + s2.str();
+        if(tp == tru)  strReturn = strReturn + " - " + s2.str();
         if(tp == nhan) strReturn = strReturn + " x " + s2.str();
 
         stringstream s3;
@@ -45,20 +43,13 @@ struct Equation{
     }
 
     int key(){
-        if(tp == cong){
-            if(x+y == z) return 1;
-            return 2;
-        }
+        if(tp == cong) if(x+y == z) return 1;
+        if(tp == tru)  if(x-y == z) return 1;
+        if(tp == nhan) if(x*y == z) return 1;
 
-        if(tp == tru){
-            if(x-y == z) return 1;
-            return 2;
-        }
-        if(tp == nhan){
-            if(x*y == z) return 1;
-            return 2;
-        }
+        return 2;
     }
-} ;
+
+};
 
 #endif // EQUATION_H
