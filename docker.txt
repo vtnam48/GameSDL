@@ -5,3 +5,5 @@ container: là running instance là thực thể của image => chạy image-> c
 dockerfile: define mọi thứ liên quan đến môi trường 
 
 quy trình: từ dockerfile => build ra image => run container
+
+abcxyz
