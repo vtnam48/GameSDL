@@ -1,0 +1,7 @@
+VM: hypervisor: nó dùng các kernel của OS để điều khiển phần cứng phía dưới
+
+image : là exec package chứa tất cả mọi thứ để app chạy được lib/code/env/config.
+container: là running instance là thực thể của image => chạy image-> container
+dockerfile: define mọi thứ liên quan đến môi trường 
+
+quy trình: từ dockerfile => build ra image => run container
